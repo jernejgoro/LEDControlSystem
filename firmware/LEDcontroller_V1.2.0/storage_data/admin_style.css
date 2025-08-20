@@ -1,0 +1,309 @@
+/*** HTML *****************************************************************************/
+
+html {
+  /* Style */
+  display: block;
+  background-color: #ededed;
+  /*Prevent user to select text on website*/
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Text */
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+}
+
+a {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/*** CRED/CONF & MANAGE CLASS *********************************************************/
+
+.class_cred,
+.class_conf,
+.class_manage {
+  /* Position */
+  position: relative;
+  transform: translate(-50%, 0);
+  top: 0px;
+  left: 50%;
+  z-index: 0;
+  /* Size */
+  width: 95%;
+  max-width: 600px;
+  height: 300px;
+  /* Style */
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #000000;
+  /* Text */
+  font-size: 15px;
+}
+
+.class_manage {
+  /* Size */
+  height: 150px;
+}
+
+/*** TITLE CLASS & TITLE SUBCLASSES ***************************************************/
+
+.class_title {
+  /* Position */
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /* Size */
+  width: 100%;
+  height: 55px;
+  /* Style */
+  background-color: #868686;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  border-bottom: 1px solid #000000;
+  /* Text */
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.class_tooltip {
+  /* Position */
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  /* Size */
+  width: 100%;
+  height: 100%;
+  /* Style */
+  border-top-right-radius: 6px;
+}
+
+.class_tooltiptext {
+  /* Position */
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  margin: 0;
+  /* Size */
+  width: 100%;
+  height: 100%;
+  /* Style */
+  visibility: hidden;
+  background-color: #474747;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  /* Text */
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.class_tooltip:hover .class_tooltiptext {
+  visibility: visible;
+}
+
+.class_title p,
+.class_tooltiptext p {
+  /* Position */
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  margin: 0;
+}
+
+/*** FEEDBACK & CONTENT CLASS *********************************************************/
+
+.class_feedback {
+  /* Position */
+  position: absolute;
+  top: 56px;
+  left: 0px;
+  /* Size */
+  width: 100%;
+  height: 19px;
+  /* Style */
+  background-color: #d6d6d6;
+}
+
+.class_content {
+  /* Position */
+  position: absolute;
+  top: 75px;
+  /* Size */
+  width: 100%;
+  height: 225px;
+}
+
+.class_manage .class_content {
+  /* Size */
+  height: 75px;
+}
+
+/*** CONTENT SUBCLASSES of CRED CLASS *************************************************/
+
+.class_cred input[type=text],
+.class_cred input[type=password] {
+  /* Position */
+  position: relative;
+  top: 20px;
+  /* Size */
+  width: 70%;
+  height: 35px;
+  /* Style */
+  border-radius: 6px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  outline: none;
+  /* Text */
+  text-align: center;
+  font-size: 15px;
+  color: #000000;
+}
+
+.class_cred input[type=text]:focus,
+.class_cred input[type=password]:focus {
+  outline-style: solid;
+  outline-color: #868686;
+  outline-width: 1px;
+}
+
+/* Hide placeholder on focus */
+.class_cred input:focus::placeholder {
+  color: transparent;
+}
+
+.class_cred .class_checkbox_label {
+  /* Position */
+  position: relative;
+  top: -3px;
+  /* Size */
+  width: 100%;
+  height: 150px;
+  /* Text */
+  font-weight: normal;
+  font-size: 13px;
+}
+
+/*** CONTENT SUBCLASSES of CONF CLASS *************************************************/
+
+.class_conf .class_content {
+  line-height: 25px;
+}
+
+.class_conf .class_content_subsection {
+  /* Position */
+  position: relative;
+  top: 15px;
+  left: 0px;
+  /* Size */
+  width: 100%;
+  height: 20px;
+  /* Text */
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.class_conf input[type=number] {
+  /* Position */
+  position: relative;
+  transform: translate(0%, 0);
+  left: 0%;
+  /* Size */
+  width: 60px;
+  height: 30px;
+  /* Style */
+  border-radius: 6px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  outline: none;
+  /* Text */
+  text-align: center;
+  font-size: 15px;
+  color: #000000;
+}
+
+.class_conf input[type=number]:focus {
+  outline-style: solid;
+  outline-color: #868686;
+  outline-width: 1px;
+}
+
+.class_conf .class_checkbox_label {
+  /* Position */
+  position: relative;
+  top: -3px;
+  /* Size */
+  width: 100%;
+  height: 150px;
+  /* Text */
+  font-weight: normal;
+}
+
+.class_conf label {
+  font-size: 13px;
+}
+
+/*** CONTENT SUBCLASSES of MANAGE CLASS ***********************************************/
+
+.class_manage input[type=submit] {
+  /* Position */
+  position: absolute;
+  transform: translate(-50%, 0);
+  top: 15px;
+  left: 50%;
+  /* Size */
+  width: 110px;
+  height: 45px;
+  /* Style */
+  background-color: #868686;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  /* Text */
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+}
+
+/*** COMMON of CONF & CRED CLASS ******************************************************/
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  top: 30px;
+}
+
+#id_checkbox_cred,
+#id_checkbox_enable_wifi {
+  accent-color: #d6d6d6;
+}
+
+input[type=submit]:hover {
+  background-color: #474747;
+}
+
+input[type=submit] {
+  /* Position */
+  position: absolute;
+  transform: translate(-50%, 0);
+  top: 170px;
+  left: 50%;
+  /* Size */
+  width: 90px;
+  height: 45px;
+  /* Style */
+  background-color: #868686;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  /* Text */
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+/*** END ******************************************************************************/

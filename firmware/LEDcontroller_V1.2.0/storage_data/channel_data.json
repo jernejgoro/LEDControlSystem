@@ -1,0 +1,14 @@
+{
+    "ch0_duty": 100,
+    "ch0_enable": 1,
+    "ch1_duty": 100,
+    "ch1_enable": 1,
+    "ch2_duty": 100,
+    "ch2_enable": 1,
+    "ch3_duty": 100,
+    "ch3_enable": 1,
+    "ch4_duty": 100,
+    "ch4_enable": 1,
+    "ch5_duty": 100,
+    "ch5_enable": 1
+}

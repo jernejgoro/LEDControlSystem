@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="application/javascript" src="javascript.js"></script>
+    <meta name="viewport" , charset="utf-8" , content="width=device-width, initial-scale=1">
+
+    <title>LED CONTROLLER</title>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon48x48.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon512x512.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon180x180.png" />
+</head>
+
+<body>
+    <!-- MAIN CONTENT -->
+    <h1>LED CONTROLLER</h1>
+    <p><a href="/">GO TO CONTROL PANEL</a></p>
+    <div class="class_cred">
+        <div class="class_title">
+            <p>WIFI</p>
+            <sup class="class_tooltip">
+                <span class="class_tooltiptext">
+                    <p>Input new credentials that will be used by the LED controller to connect to the WiFi network</p>
+                </span>
+            </sup>
+        </div>
+        <div class="class_feedback" id="feedback_cred">Input new credentials</div>
+        <div class="class_content">
+            <input id="id_ssid" type="password" value="" placeholder="SSID" autocomplete="off" maxlength="30">
+            <br><br>
+            <input id="id_pass" type="password" value="" placeholder="PASSWORD" autocomplete="off" maxlength="30">
+            <br><br><br>
+            <input id="id_checkbox_cred" type="checkbox" onclick="show_cred()">
+            <label class="class_checkbox_label">SHOW CREDENTIALS</label>
+            <input type="submit" value="SAVE" onclick="post_cred()">
+        </div>
+    </div>
+    <br>
+    <div class="class_conf">
+        <div class="class_title">
+            <p>CONFIGURATION</p>
+            <sup class="class_tooltip">
+                <span class="class_tooltiptext">
+                    <p>Configure number of RGB outputs, WHITE outputs and WiFi state at device boot</p>
+                </span>
+            </sup>
+        </div>
+        <div class="class_feedback" id="feedback_conf">Configure LED controller</div>
+        <div class="class_content">
+            <div class="class_content_subsection">Outputs configuration:</div>
+            <br>
+            <label>WHITE:</label>
+            <input id="id_w_outputs" type="number" min="0" max="6" value="0">
+            &nbsp&nbsp&nbsp
+            <label>RGB:</label>
+            <input id="id_rgb_outputs" type="number" min="0" max="2" value="0">
+            <br>
+            <div class="class_content_subsection">WiFi state at device boot:</div>
+            <br>
+            <input id="id_checkbox_enable_wifi" type="checkbox">
+            <label class="class_checkbox_label">AUTOMATICALLY TURN ON</label>
+            <input type="submit" value="SAVE" onclick="post_conf()">
+        </div>
+    </div>
+    <br>
+    <div class="class_manage">
+        <div class="class_title">
+            <p>MANAGEMENT</p>
+        </div>
+        <div class="class_feedback" id="feedback_manage">Manage LED controller</div>
+        <div class="class_content">
+            <input type="submit" value="REBOOT" onclick="post_reboot()">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+/*** HTML *****************************************************************************/
+
+html {
+  /* Style */
+  display: block;
+  background-color: #000000;
+  /*Prevent user to select text on website*/
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Text */
+  color: #ffffff;
+  text-align: center;
+  font-family: Arial;
+}
+
+h1 {
+  color: powderblue;
+}
+
+/*** DIVS *****************************************************************************/
+
+.class_rgb,
+.class_white {
+  /* Position */
+  position: relative;
+  transform: translate(-50%, 0);
+  top: 0px;
+  left: 50%;
+  z-index: 0;
+  /* Size */
+  width: 95%;
+  max-width: 1200px;
+  /* Style */
+  border-radius: 6px;
+  border: 3px solid #404040;
+}
+
+.class_white {
+  /* Size */
+  height: 115px;
+}
+
+.class_rgb {
+  /* Size */
+  height: 205px;
+}
+
+.class_rgb p,
+.class_white p {
+  /* Position */
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 10px;
+  /* Text */
+  font-weight: normal;
+  font-size: 20px;
+  color: #707070;
+  font-weight: bold;
+}
+
+/*** TOGGLE SWITCH ********************************************************************/
+
+.switch {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #404040;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #1a7ac8;
+  box-shadow: 0px 0px 10px #2196F3;
+}
+
+/* Rounded slider */
+.slider.round {
+  border-radius: 25px;
+}
+
+/* Inner dot */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: 4px;
+  bottom: 4px;
+  background-color: powderblue;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(25px);
+  -ms-transform: translateX(25px);
+  transform: translateX(25px);
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*** SLIDERS **************************************************************************/
+
+.slider_red,
+.slider_green,
+.slider_blue,
+.slider_grey {
+  /* Position */
+  position: absolute;
+  transform: translate(-50%, 0);
+  left: 50%;
+  /* Size */
+  width: 90%;
+  height: 30px;
+  /* Style */
+  appearance: none;
+  border-radius: 15px;
+  outline: none;
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.slider_grey {
+  /* Position */
+  top: 50px;
+  /* Style */
+  background: #404040;
+}
+
+.slider_red {
+  /* Position */
+  top: 50px;
+  /* Style */
+  background: #cc0000;
+}
+
+.slider_green {
+  /* Position */
+  top: 95px;
+  /* Style */
+  background: #00cc00;
+}
+
+.slider_blue {
+  /* Position */
+  top: 140px;
+  /* Style */
+  background: #0000cc;
+}
+
+input[type="range"]:hover {
+  opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background-color: powderblue;
+  border-radius: 50%;
+  border: 0px solid #000000;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background-color: powderblue;
+  border-radius: 50%;
+  border: 0px solid #000000;
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 25px;
+  height: 25px;
+  background-color: powderblue;
+  border-radius: 50%;
+  border: 0px solid #000000;
+  cursor: pointer;
+}
+
+/*** END ******************************************************************************/
